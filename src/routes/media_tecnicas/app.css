@@ -1,0 +1,327 @@
+html {
+    font-size: 62.5%;
+    /*font-size: 62.5%;: Establece el tamaño de fuente del HTML al 62.5% del tamaño predeterminado del navegador.
+                              Esto se hace comúnmente para facilitar el cálculo de tamaños de fuente en unidades rem (1 rem = 10px).*/
+
+    box-sizing: border-box;
+    /*box-sizing: border-box;: Establece el modelo de caja como "border-box", 
+                            lo que significa que el ancho y la altura de un elemento incluyen el relleno y el borde, pero no los márgenes.*/
+}
+
+h1 {
+    font-size: 50px;
+    /*font-size: 50px;: Establece el tamaño de fuente de los elementos h1 a 50 píxeles.*/
+
+    text-align: center;
+    /*text-align: center;: Centra el texto dentro de los elementos h1*/
+}
+
+p {
+    font-size: 40px;
+    /*font-size: 40px;: Establece el tamaño de fuente de los elementos p a 40 píxeles.*/
+
+    text-align: center;
+    /*text-align: center;: Centra el texto dentro de los elementos p.*/
+}
+
+*,
+*::before,
+*::after {
+    /**, *::before, *::after: Selecciona todos los elementos y sus pseudo-elementos(before, after) antes y después.*/
+
+    box-sizing: inherit;
+    /*box-sizing: inherit;: Hereda el modelo de caja "border-box" establecido en el elemento HTML.
+                         Que es border-box:El modelo de caja en CSS determina cómo se calculan las dimensiones de un elemento, 
+                         incluyendo su ancho, alto y cómo se posicionan los elementos internos en relación con esos bordes.*/
+}
+
+body {
+    padding: 0;
+    /*padding: 0; margin: 0;: Elimina el relleno y los márgenes predeterminados del elemento body.*/
+    margin: 0;
+
+    line-height: 1.6;
+    /*line-height: 1.6;: Establece la altura de línea en 1.6 veces el tamaño de fuente actual.*/
+
+    font-family: "noto sans jp", sans-serif;
+    /*font-family: Esta propiedad especifica la familia de fuentes que se utilizará para mostrar el texto.*/
+    /*"noto sans jp": Es el nombre de la fuente primaria que se desea usar. En este caso, "noto sans jp" es el nombre de una fuente específica.*/
+    /*sans-serif: Es una palabra clave de reserva que se utiliza como una opción de respaldo en caso de que la primera opción de fuente no esté disponible en el sistema del usuario.
+     "Sans-serif" es una categoría general de fuentes que no tienen serifas (los pequeños detalles al final de las letras).*/
+
+    /**/
+    /*background: url("") no-repeat center center fixed; = para la imagen de fondo*/
+    /*background-size: cover; = para que la imagen cubra todo*/
+    /**/
+
+    background-color: rgb(247, 170, 243);
+    /*Establece el color de fondo del cuerpo en un tono de rosa.*/
+}
+
+.logo {
+    /*.logo: Selecciona un elemento con la clase "logo".*/
+
+    width: 120px;
+    /*width: 120px;: Establece el ancho del elemento con la clase "logo" en 120 píxeles.*/
+
+    height: 25px;
+    /*height: 25px;: Establece la altura del elemento con la clase "logo" en 25 píxeles.*/
+}
+
+nav {
+    /*nav: Selecciona un elemento <nav>.*/
+
+    display: flex;
+    /*isplay: flex;: Establece el modelo de visualización como flexbox, lo que permite un fácil diseño flexible de los elementos secundarios.*/
+
+    align-items: center;
+    /*align-items: center;: Centra verticalmente los elementos secundarios dentro del elemento <nav>.*/
+
+    justify-content: space-around;
+    /*justify-content: space-around;:
+     Distribuye uniformemente el espacio alrededor de los elementos secundarios en el eje principal dentro del elemento <nav>.*/
+
+    min-height: 8vh;
+    /*min-height: 8vh;: Establece la altura mínima del elemento <nav> al 8% del alto de la ventana gráfica del usuario.*/
+
+    background-color: rebeccapurple;
+    /*background-color: rebeccapurple;: Establece el color de fondo del elemento <nav> en "rebeccapurple".*/
+}
+
+.ham {
+    /*.ham: Selecciona un elemento con la clase "ham".*/
+
+    display: none;
+    /*display: none;: Oculta el elemento con la clase "ham".*/
+
+    cursor: pointer;
+    /*cursor: pointer;: Cambia el cursor a una mano para indicar que el elemento es interactivo.*/
+
+    border: none;
+    /*border: none; margin: 0; padding: 0;: Elimina el borde, margen y relleno del elemento con la clase "ham".*/
+
+    margin: 0;
+    /*padding: 0; margin: 0;: Elimina el relleno y los márgenes predeterminados del elemento body.*/
+    padding: 0;
+
+    background-color: transparent;
+    /*background-color: transparent;: Establece el color de fondo del elemento con la clase "ham" como transparente.*/
+}
+
+.ham span {
+    /*ham span: Selecciona los elementos <span> que son descendientes del elemento con la clase "ham".*/
+
+    display: block;
+    /*display: block;: Establece los elementos <span> como elementos de bloque.*/
+
+    background-color: aliceblue;
+    /*background-color: aliceblue;: Establece el color de fondo de los elementos <span> en "aliceblue".*/
+
+    height: 3px;
+    /*height: 3px; width: 28px;: Establece el alto y el ancho de los elementos <span>*/
+
+    width: 28px;
+    /*width de algún elemento, lo que significa que establece su ancho en 28 píxeles.*/
+
+    margin: 10px auto;
+    /*margin: 10px auto;: Establece un margen de 10 píxeles en la parte superior e inferior y centra horizontalmente los elementos <span>.*/
+
+    border-radius: 2px;
+    /*border-radius: 2px;: Establece un radio de borde de 2 píxeles para redondear las esquinas de los elementos <span>.*/
+}
+
+.enlaces-menu {
+    /*.enlaces-menu: Selecciona un elemento con la clase "enlaces-menu".*/
+
+    display: flex;
+    /*display: flex;: Establece el modelo de visualización como flexbox para el elemento con la clase "enlaces-menu".*/
+
+    padding: 0;
+    /*padding: 0;: Elimina el relleno en el elemento con la clase "enlaces-menu".*/
+}
+
+.enlaces-menu li {
+    /*.enlaces-menu li: Selecciona los elementos <li> que son descendientes del elemento con la clase "enlaces-menu".*/
+
+    padding: 0 40px;
+    /*padding: 0 40px;: Establece un relleno de 0 en la parte superior e inferior y un relleno de 40 píxeles a la izquierda y derecha para los elementos <li>.*/
+
+    list-style-type: none;
+    /*list-style-type: none;: Elimina los marcadores de lista de los elementos <li>.*/
+
+    transition: 0.3s;
+    /*transition: 0.3s;: Establece una transición suave de 0.3 segundos para cualquier cambio de estilo en los elementos <li>.*/
+}
+
+.enlaces-menu li a {
+    /*.enlaces-menu li a: Selecciona los elementos <a> que son descendientes de los elementos <li> con la clase "enlaces-menu".*/
+
+    text-decoration: none;
+    /*text-decoration: none;: Elimina la decoración de subrayado de los enlaces.*/
+
+    font-size: 1.8rem;
+    /*font-size: 1.8rem;: Establece el tamaño de fuente de los enlaces en 1.8 rem.*/
+
+    color: black;
+    /*color: black;: Establece el color del texto de los enlaces en negro.*/
+
+    font-weight: 600;
+    /*font-weight: 600;: Establece el grosor de la fuente de los enlaces en 600 (negrita).*/
+}
+
+.enlaces-menu li:hover {
+    /*.enlaces-menu li:hover: Selecciona los elementos <li> con la clase "enlaces-menu" cuando se pasa el cursor sobre ellos.*/
+
+    background-color: brown;
+    /*background-color: brown;: Cambia el color de fondo de los elementos <li> a "brown" cuando se pasa el cursor sobre ellos.*/
+}
+
+/*DISPOSITIVOS MOVILES*/
+
+@MEDIA (max-width:768px) {
+    /*@media (max-width:768px): Inicia un bloque de reglas CSS que se aplicarán cuando el ancho de la ventana del navegador sea como máximo 768 píxeles.*/
+
+    body {
+        /*body { overflow: hidden; }: Dentro del bloque de medios, oculta el desbordamiento horizontal del cuerpo del documento cuando el ancho de la ventana del navegador es de 768 píxeles o menos.
+     Esto significa que el desbordamiento horizontal (scroll horizontal) no será visible si el contenido se desborda del cuerpo.*/
+
+        overflow: hidden;
+        /*overflow: Esta propiedad especifica qué hacer si el contenido del elemento desborda el área de contenido asignada.
+       hidden: Con el valor hidden, se oculta cualquier contenido que desborde el área de contenido del elemento, 
+       lo que significa que el desbordamiento no será visible para el usuario.*/
+    }
+
+    .logo {
+        /*logo { padding-left: 25px; }: Añade un relleno a la izquierda del elemento con la clase "logo"
+     de 25 píxeles cuando el ancho de la ventana del navegador es de 768 píxeles o menos.*/
+
+        padding-left: 25px;
+        /**/
+    }
+
+    .ham {
+        /*.ham { ... }: Este bloque de reglas aplica estilos al elemento con la clase "ham":*/
+
+        display: block;
+        /*display: block;: Hace que el elemento con la clase "ham" sea visible.*/
+
+        position: absolute;
+        /*position: absolute;: Posiciona el elemento absolutamente dentro de su contenedor más cercano posicionado.*/
+
+        top: 15px;
+        /*top: 15px; right: 25px;: Posiciona el elemento 15 píxeles desde la parte superior y 25 píxeles desde la derecha de su contenedor más cercano posicionado.*/
+        right: 25px;
+
+        transition: 0.2s 0.1s;
+        /* /*transition: 0.2s 0.1s;: Define una transición que afectará a todas las propiedades animadas durante 0.2 segundos, con un retraso de inicio de 0.1 segundos.*/
+    }
+
+    .ham:hover {
+        /*.ham:hover { transform: rotate(360deg); }: Cuando se pasa el cursor sobre el elemento con la clase "ham", lo rota 360 grados. Es decir, gira completamente sobre sí mismo.*/
+        transform: rotate(360deg);
+    }
+
+    nav {
+        /*nav { ... }: Dentro del bloque de medios, se aplican estilos específicos al elemento <nav>:*/
+
+        flex-direction: column;
+        /*flex-direction: column;: Los elementos hijos de <nav> se colocan en una columna en lugar de una fila.*/
+
+        align-items: flex-start;
+        /*align-items: flex-start;: Los elementos hijos se alinean en el extremo de inicio del eje transversal (verticalmente).*/
+
+        padding: 25px 0;
+        /*padding: 25px 0;: Establece un relleno de 25 píxeles arriba y abajo.*/
+    }
+
+    .enlaces-menu {
+        /*.enlaces-menu { ... }: Dentro del bloque de medios, se aplican estilos específicos al elemento con la clase "enlaces-menu":*/
+
+        flex-direction: column;
+        /*flex-direction: column;: Los elementos hijos de .enlaces-menu se colocan en una columna.*/
+
+        justify-content: space-around;
+        /*justify-content: space-around;: Distribuye uniformemente el espacio alrededor de los elementos hijos en el eje principal.*/
+
+        align-items: center;
+        /*align-items: center;: Centra los elementos hijos en el eje transversal.*/
+
+        height: 92vh;
+        /*height: 92vh;: Establece la altura del elemento en el 92% del alto de la ventana gráfica.*/
+
+        margin: 0;
+        /*margin: 0; padding: 0;: Elimina los márgenes y el relleno.*/
+        padding: 0;
+
+        width: 100%;
+        /*width: 100%;: Establece el ancho al 100% del contenedor.*/
+
+        display: none;
+        /*display: none;: Oculta el elemento con la clase "enlaces-menu".*/
+
+        opacity: 0;
+        /*opacity: 0;: Establece la opacidad del elemento en 0 (totalmente transparente).*/
+    }
+
+    .enlaces-menu li {
+        /*.enlaces-menu li { ... }: Establece estilos específicos para los elementos <li> dentro de .enlaces-menu:*/
+
+        width: 100%;
+        /*width: 100%;: Establece el ancho al 100% del contenedor.*/
+
+        text-align: center;
+        /*text-align: center;: Centra el texto dentro de los elementos <li>.*/
+
+        padding: 20px;
+        /*padding: 20px;: Agrega un relleno de 20 píxeles alrededor del contenido de los elementos <li>.*/
+    }
+}
+
+@keyframes muestraMenu {
+    /*@keyframes muestraMenu { ... }: Define un conjunto de fotogramas clave llamado "muestraMenu" que especifica cómo debe cambiar un estilo durante una animación.*/
+
+    from {
+        opacity: 0;
+    }
+
+    /*from { opacity: 0; }: Define el estilo inicial de la animación, donde la opacidad del elemento es 0 (totalmente transparente).*/
+
+    to {
+        opacity: 1;
+    }
+
+    /*to { opacity: 1; }: Define el estilo final de la animación, donde la opacidad del elemento es 1 (totalmente opaco).*/
+}
+
+.enlaces-menu.activado {
+    /*.enlaces-menu.activado { ... }: Selecciona un elemento con la clase "enlaces-menu" que también tenga la clase "activado".*/
+
+    display: flex;
+    /*display: flex;: Cambia la propiedad de visualización del elemento a flexbox, lo que permite un diseño flexible de los elementos secundarios.*/
+
+    animation: muestraMenu 350ms ease-in-out both;
+    /*animation: muestraMenu 350ms ease-in-out both;: Aplica una animación llamada "muestraMenu" 
+    al elemento durante 350 milisegundos, utilizando una función de temporización "ease-in-out" 
+    (aceleración y desaceleración) y aplicando el efecto tanto al inicio como al final de la animación.*/
+}
+
+.br-1.animado {
+    /*.br-1.animado { ... }: Selecciona un elemento con las clases "br-1" y "animado".*/
+    transform: rotate(-45deg) translate(-10px, 8px);
+    /*transform: rotate(-45deg) translate(-10px, 8px);: Aplica una transformación 
+    al elemento que lo rota -45 grados en sentido antihorario y lo desplaza 10 píxeles a la izquierda y 8 píxeles hacia abajo.*/
+}
+
+.br-2.animado {
+    /*.br-2.animado { ... }: Selecciona un elemento con las clases "br-2" y "animado".*/
+
+    opacity: 0;
+    /*opacity: 0;: Establece la opacidad del elemento en 0 (totalmente transparente), haciendo que el elemento desaparezca.*/
+}
+
+.br-3.animado {
+    /*.br-3.animado { ... }: Selecciona un elemento con las clases "br-3" y "animado".*/
+
+    transform: rotate(45deg) translate(-10px, -8px);
+    /*transform: rotate(45deg) translate(-10px, -8px);: Aplica una transformación al elemento que lo rota 45 grados en sentido horario y lo desplaza 10 píxeles a la izquierda y 8 píxeles hacia arriba.*/
+}
