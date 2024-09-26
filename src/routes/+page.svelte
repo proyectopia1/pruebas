@@ -10,7 +10,7 @@
             <a href="/media_tecnicas/md_cc">
                 <button class="btnLogin-popup">El pascual bravo</button>
             </a>
-            <a href="#">
+            <a href="/">
                 <button class="btnLogin-popup">Acerca del proyectoz</button>
             </a>
             <a href="Registro.html">
