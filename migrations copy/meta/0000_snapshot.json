@@ -1,0 +1,172 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "6",
+  "dialect": "sqlite",
+  "tables": {
+    "jornadas": {
+      "name": "jornadas",
+      "columns": {
+        "id_jornada": {
+          "autoincrement": false,
+          "name": "id_jornada",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "nom_jornada": {
+          "autoincrement": false,
+          "name": "nom_jornada",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {}
+    },
+    "media_tecnica": {
+      "name": "media_tecnica",
+      "columns": {
+        "id_media_tecnica": {
+          "autoincrement": false,
+          "name": "id_media_tecnica",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "nom_media": {
+          "autoincrement": false,
+          "name": "nom_media",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "desc_media": {
+          "autoincrement": false,
+          "name": "desc_media",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_estudiante_inscrito": {
+          "autoincrement": false,
+          "name": "id_estudiante_inscrito",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_jornada": {
+          "autoincrement": false,
+          "name": "id_jornada",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "media_tecnica_id_estudiante_inscrito_estudiantes_inscritos_id_estudiante_inscrito_fk": {
+          "name": "media_tecnica_id_estudiante_inscrito_estudiantes_inscritos_id_estudiante_inscrito_fk",
+          "tableFrom": "media_tecnica",
+          "tableTo": "estudiantes_inscritos",
+          "columnsFrom": [
+            "id_estudiante_inscrito"
+          ],
+          "columnsTo": [
+            "id_estudiante_inscrito"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "media_tecnica_id_jornada_jornadas_id_jornada_fk": {
+          "name": "media_tecnica_id_jornada_jornadas_id_jornada_fk",
+          "tableFrom": "media_tecnica",
+          "tableTo": "jornadas",
+          "columnsFrom": [
+            "id_jornada"
+          ],
+          "columnsTo": [
+            "id_jornada"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "estudiantes_inscritos": {
+      "name": "estudiantes_inscritos",
+      "columns": {
+        "id_estudiante_inscrito": {
+          "autoincrement": false,
+          "name": "id_estudiante_inscrito",
+          "type": "numeric",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "nombre_apellidos": {
+          "autoincrement": false,
+          "name": "nombre_apellidos",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_media_tecnica": {
+          "autoincrement": false,
+          "name": "id_media_tecnica",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_jornada": {
+          "autoincrement": false,
+          "name": "id_jornada",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "estudiantes_inscritos_id_media_tecnica_media_tecnica_id_media_tecnica_fk": {
+          "name": "estudiantes_inscritos_id_media_tecnica_media_tecnica_id_media_tecnica_fk",
+          "tableFrom": "estudiantes_inscritos",
+          "tableTo": "media_tecnica",
+          "columnsFrom": [
+            "id_media_tecnica"
+          ],
+          "columnsTo": [
+            "id_media_tecnica"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "estudiantes_inscritos_id_jornada_jornadas_id_jornada_fk": {
+          "name": "estudiantes_inscritos_id_jornada_jornadas_id_jornada_fk",
+          "tableFrom": "estudiantes_inscritos",
+          "tableTo": "jornadas",
+          "columnsFrom": [
+            "id_jornada"
+          ],
+          "columnsTo": [
+            "id_jornada"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
