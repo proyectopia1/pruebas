@@ -1,12 +1,4 @@
-html {
-    font-size: 62.5%;
-    /*font-size: 62.5%;: Establece el tamaño de fuente del HTML al 62.5% del tamaño predeterminado del navegador.
-                              Esto se hace comúnmente para facilitar el cálculo de tamaños de fuente en unidades rem (1 rem = 10px).*/
 
-    box-sizing: border-box;
-    /*box-sizing: border-box;: Establece el modelo de caja como "border-box", 
-                            lo que significa que el ancho y la altura de un elemento incluyen el relleno y el borde, pero no los márgenes.*/
-}
 
 h1 {
     font-size: 50px;
